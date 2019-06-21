@@ -1,0 +1,36 @@
+<div class="data-upload-form">
+	<h1>Upload</h1>
+	<p [class.disable]="fillTheFields">Plese select and fill all fields</p>
+	<form class="upload-form" [formGroup]="uploadForm" enctype="multipart/form-data">
+		<mat-form-field class="form-field">
+			<input type="text" name="" matInput placeholder="Material name" formControlName="name">
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<mat-label>Which Semester?</mat-label>
+			<mat-select formControlName="sem">
+				<mat-option *ngFor="let sem of semesters" [value]="sem">{{ sem }}</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<mat-label>Which Subject?</mat-label>
+			<mat-select formControlName="subject">
+				<mat-option *ngFor="let sub of subjects" [value]="sub">{{ sub }}</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<mat-label>Material Type?</mat-label>
+			<mat-select formControlName="material">
+				<mat-option *ngFor="let material of materials" [value]="material">{{ material }}</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<textarea matInput placeholder="About material" formControlName="content"></textarea>
+		</mat-form-field>
+		<div>
+		<label class="custom-file-upload">
+ 	   			<input type="file"  accept="application/pdf" (click)="onImagePick($event)"> Select File
+		</label>
+		</div>
+			<button mat-raised-button type="submit" (click)="uploadFormData()">Upload <mat-icon>backup</mat-icon></button>
+	</form>
+</div> 

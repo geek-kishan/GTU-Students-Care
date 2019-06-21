@@ -1,0 +1,29 @@
+.signup-form {
+	width: 40%;
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.form-field {
+	width: 100%;
+}
+.signup-form h1 {
+	font-family: 'Arbutus Slab', serif;
+	font-weight: lighter;
+}
+button {
+	background-color: #ff5c33;
+	color: white;
+	font-size: 18px;
+	font-family: 'Barlow', sans-serif;
+	padding: 2px 15px 2px 15px;
+}
+.disabled {
+	display: none;
+}
+.login-error{
+	font-size: 18px;
+	color: red;
+	font-family: 'Arbutus Slab', serif;
+}

@@ -1,0 +1,19 @@
+<div class="login-form">
+	<h1>Login</h1>
+	<p [class.disabled]="rightData" class="login-error">Wrong credentials!</p>
+	<p [class.disabled]="dataRequire" class="login-error">Enter required details for login!</p>
+	<form [formGroup]="loginForm">
+		<mat-form-field class="form-field">
+			<input type="email" name="email" matInput placeholder="Email ID" formControlName="userEmail">
+			<mat-error *ngIf="loginForm.get('userEmail').invalid && loginForm.get('userEmail').touched">Enter a valid Email</mat-error>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<input type="password" name="password" matInput placeholder="Password" formControlName="userPassword">
+			<mat-error *ngIf="loginForm.get('userPassword').invalid && loginForm.get('userPassword').touched">Please Enter the password</mat-error>
+		</mat-form-field>
+		<button mat-raised-button type="submit" (click)= "loginUser()">Login  <mat-icon>send</mat-icon></button>
+	</form>
+	<div class="optional-links">
+	<a class="optional-link" routerLink="/signup">New account</a><span> | </span><a class="optional-link" routerLink="/forgotpass">Forgot Password</a>
+	</div>
+</div>

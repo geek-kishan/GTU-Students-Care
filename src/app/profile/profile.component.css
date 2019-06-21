@@ -1,0 +1,18 @@
+ .user-profile h1 {
+ 	font-weight: lighter;
+ }
+ span {
+ 	color: red;
+ }
+ .user-profile {
+ 	padding: 25px 0px;
+ 	font-family: 'Arbutus Slab', serif;
+ 	text-align: center;
+ 	width: 30%;
+ 	margin: auto;
+ }
+.image-warp {
+	width: 200;
+	margin: auto;
+	padding: 10px 0px;
+ }

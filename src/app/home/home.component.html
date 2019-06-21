@@ -1,0 +1,76 @@
+<div class="search-form-div">
+	<h2>What are you looking for?</h2>
+	<form [formGroup]="searchForm" class="search-form-container">
+		<mat-form-field class="form-field">
+			<mat-label>Semester</mat-label>
+			<mat-select formControlName="sem">
+				<mat-option *ngFor= "let sem of semesters" [value]="sem">{{ sem }}</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<mat-label>Subject</mat-label>
+			<mat-select formControlName="sub">
+				<mat-option *ngFor="let sub of subjects" [value]="sub"> {{ sub }}</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<mat-label>Material</mat-label>
+			<mat-select formControlName="material">
+				<mat-option *ngFor="let material of materials" [value]="material" form> {{ material }}</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<button mat-raised-button class="search-button" type="submit" (click)="search()">Search</button>
+	</form>
+	<p [class.disabled]="fieldsNotRequired" class="error">Please select all fields</p>
+</div>
+<h1 class="just-for"># Learn anytime & anywhere</h1>
+<div class="one-time-page" [class.secondTime]="secondTime">
+	<div class="find-ebooks">
+		<div class="image-warper">
+			<img src="https://cdn2.iconfinder.com/data/icons/science-set-3/512/5-512.png" >
+		</div>
+			<p class="op-heading">E-books</p>
+			<p class="op-content">E-books so you don't have to buy costly hardcopied</p>
+	</div>
+	<div class="find-papersolutions">
+		<div class="image-warper">
+			<img src="https://gregorianfoundation.org/wp-content/uploads/2016/04/Bright-Icon.png" >
+		</div>
+			<p class="op-heading">Paper solutions</p>
+			<p class="op-content">Solution of previous years question papers to get more marks in exams</p>
+	</div>
+	<div class="find-tutorials">
+		<div class="image-warper">
+			<img src="https://www.law.berkeley.edu/wp-content/uploads/2019/02/paper-icon.png" >
+		</div>
+			<p class="op-heading">Tutorials</p>
+			<p class="op-content">Tutorial for different topics so you can understand different topics easily</p>
+	</div>
+	<div class="upload-files">
+		<div class="image-warper">
+			<img src="https://static.thenounproject.com/png/7421-200.png" >
+		</div>
+			<p class="op-heading">Upload</p>
+			<p class="op-content">You can upload material to help other students as well</p>
+	</div>
+</div>
+<div class="loading-data" [class.loading-disabled]='isLoading'>
+	<mat-progress-spinner color="warn" mode="indeterminate" value="65"></mat-progress-spinner>
+</div>
+<div [class.search-results]="secondTime">
+		<div class="result" *ngFor="let file of files">
+			<mat-card class="search-cards">
+			<mat-card-header>
+				 <div mat-card-avatar class="header-image"></div>
+				<mat-card-title>{{file.name}}</mat-card-title>
+				<mat-card-subtitle>{{file.material}} : {{file.subject}} : {{file.sem}}</mat-card-subtitle>
+			</mat-card-header>
+			<mat-card-content class="card-content">
+				<p>{{file.content}}</p>
+			</mat-card-content>
+			<mat-card-actions>
+				<button mat-raised-button color="warn"><a download [href]="file.filePath">Download</a></button>
+			</mat-card-actions>
+		</mat-card>
+	</div>
+</div>	

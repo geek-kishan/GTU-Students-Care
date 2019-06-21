@@ -1,0 +1,20 @@
+<div class="signup-form">
+	<h1>Signup</h1>
+	<p [class.disabled] = "EmailExists" class="login-error">Email already exists</p>
+	<p [class.disabled]= "requireData" class="login-error">Please enter all details</p>
+	<form [formGroup]="signupForm">
+		<mat-form-field class="form-field">
+			<input type="text" name="name" [(ngModel)]="signupData.name" placeholder="Name" matInput formControlName="userName">
+			<mat-error *ngIf="signupForm.get('userName').invalid && signupForm.get('userName').touched">Name is required</mat-error>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<input type="email" name="email" [(ngModel)]="signupData.email" placeholder="Email ID" matInput formControlName="userEmail">
+			<mat-error *ngIf="signupForm.get('userEmail').invalid && signupForm.get('userEmail').touched">Please enter a valid Email</mat-error>
+		</mat-form-field>
+		<mat-form-field class="form-field">
+			<input type="password" name="password" [(ngModel)]="signupData.password" placeholder="Password" matInput formControlName="userPassword">
+			<mat-error *ngIf="signupForm.get('userPassword').invalid && signupForm.get('userPassword').touched">Please set your password</mat-error>
+		</mat-form-field>
+		<button mat-raised-button (click)="signupUser()" type="submit">Signup  <mat-icon>send</mat-icon></button>
+	</form>
+</div> 

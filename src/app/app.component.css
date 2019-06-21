@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab|Barlow:500|Dosis|Nunito|Rubik');
+header {
+	text-align: center;
+	background-color: #ffcc00;
+	padding: 35px;
+	color: #4d3d00 !important;
+}
+header a {
+	color: #4d3d00;
+	text-decoration: none; 
+}
+header a:hover {
+	color: blue;
+}
+header h1 {
+	font-family: 'Arbutus Slab', serif;
+	font-weight: lighter;
+	font-size: 45px;
+	letter-spacing: 1px;
+}
+header p {
+	font-family: 'Arbutus Slab', serif;
+	font-weight: normal;
+	font-size: 21px;
+}
+.gtu-navigation ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	background-color: #6666ff;
+	display: inline-block;
+	width: 100%;
+/*	box-shadow: 0px 10px 6px -9px gray; */
+}
+.gtu-navigation li {	
+	margin: 0px;
+	transition: background-color .5s;
+	display: inline-block;
+}
+.nav-float-left li{
+	float: left;	
+}
+.nav-float-right{
+	float: right;
+	padding-right: .5cm;
+	padding-left: .5cm;
+}
+.user-profile li{
+	float: right;
+}
+/* .inline-icon {
+	vertical-align: bottom;
+}*/
+.gtu-navigation a {
+	margin: 0px;
+	font-size: 18px;
+	color: white;	
+	padding: 12px;
+	display: inline-block;
+	text-decoration: none;
+	font-family: 'Arbutus Slab', serif;
+}
+.gtu-navigation li:hover {
+	background-color: #e65c00;
+}
+.active-nav {
+	background-color: #e65c00;
+}
+.router-outlet {
+	
+}
+footer {
+	background-color: #4d4dff ;
+	text-align: center;
+	color: white;
+	padding: 30px;
+	font-family: 'Arbutus Slab', serif;
+}

@@ -1,0 +1,52 @@
+h1 {
+	text-align: center;
+	font-weight: lighter;
+	font-family: 'Arbutus Slab', serif;
+}
+.data-upload-form {
+
+}
+.upload-form {
+	width: 40%;
+	margin: auto;
+	padding: 50px;
+	text-align: center;
+}
+.form-field {
+	width: 100%;
+}
+.custom-file-upload {
+    border: 2px solid #ccc;
+    display: inline-block;
+    padding: 12px 12px;
+    cursor: pointer;
+    color: gray;
+    width: 95.5%;
+    margin: 10px 0px 25px 0px;
+}
+.file-input-container {
+	width: 25%;
+	margin: auto;
+}
+input[type="file"] {
+    display: none;
+}
+button {
+	background-color: #ff5c33;
+	color: white;
+	font-size: 18px;
+	font-family: 'Barlow', sans-serif;
+	padding: 2px 15px 2px 15px;
+}
+.mat-icon {
+	font-size: 23px;
+}
+.disable {
+	display: none;
+}
+p {
+	text-align: center;
+	font-size: 18px;
+	color: red;
+	font-family: 'Arbutus Slab', serif;
+}

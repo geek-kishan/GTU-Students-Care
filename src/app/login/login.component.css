@@ -1,0 +1,42 @@
+.login-form {
+	width: 40%;
+	margin: auto;
+	text-align: center;
+	margin-top: 75px;
+	margin-bottom: 30px;
+}
+.form-field {
+	width: 100%;
+}
+button {
+	background-color: #ff5c33;
+	color: white;
+	font-size: 18px;
+	font-family: 'Barlow', sans-serif;
+	padding: 2px 15px 2px 15px;
+}
+input {
+	font-family: 'Rubik', sans-serif;
+}
+.login-form h1 {
+	font-family: 'Arbutus Slab', serif;
+	font-weight: lighter;
+}
+.disabled {
+	display: none;
+}
+.login-error{
+	font-size: 18px;
+	color: red;
+	font-family: 'Arbutus Slab', serif;
+}
+.optional-link {
+ 	font-family: 'Arbutus Slab', serif; 
+ 	text-decoration: none;
+ }
+ .optional-links {
+ 	margin: 50px 0px 0px 0px;
+ }
+ .optional-link:hover {
+ 	color: red;
+ }

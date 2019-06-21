@@ -1,0 +1,114 @@
+h2 {
+	text-align: center;
+	font-weight: lighter;
+	font-family: 'Arbutus Slab', serif;
+	margin: 0px;
+	padding: 50px;
+}
+.search-form-container {
+	width: 85%;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
+.search-form-div {
+	background-color: #f2f2f2;
+	/*box-shadow: -12px 13px 4px -13px gray;*/
+}
+.form-field {
+	width: 25%;
+	padding: 15px;
+}
+.search-button {
+	margin-left: 5px;
+	font-family: 'Arbutus Slab', serif;
+	background-color: #ff3333;
+	padding: 5px 10px 5px 10px;
+	color: white;
+	font-size: 20px;
+	font-weight: lighter;
+}
+.disabled {
+	display: none;
+}
+.error {
+	font-size: 18px;
+	color: red;
+	margin: 0px;
+	text-align: center;
+	padding: 15px 0px;
+	font-family:'Arbutus Slab', serif;
+}
+.search-results {
+	background-color: #e6e6e6;
+	padding: 15px;
+}
+.search-results {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: auto auto auto auto;
+}
+.card-content {
+	font-size: 18px;
+	color: black;
+	font-family: 'Arbutus Slab', serif; 
+	min-height: 2cm;
+}
+.header-image {
+  background-image: url('http://www.iconarchive.com/download/i86107/graphicloads/filetype/pdf.ico');
+  background-size: contain;
+}
+.search-results a {
+	text-decoration: none;
+	color: white;
+}
+.one-time-page {
+	padding: 50px 25px;
+	display: grid;
+	grid-gap: 25px;
+	grid-template-columns: auto auto auto auto;
+	background-color: #ffccff;
+}
+.one-time-page img{
+	height: 110px;
+	width: 110px;
+}
+.image-warper {
+	border: 2px solid black;
+	margin: auto;
+	width: 110px;
+	padding: 20px;
+	border-radius: 50%;
+}
+.op-heading {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Arbutus Slab', serif;
+}
+.op-content {
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Arbutus Slab', serif;
+}
+.just-for {
+	font-family: 'Arbutus Slab', serif;
+	text-align: center;
+	background-color: #ff944d;
+	margin: 0px;
+	padding: 25px;	
+	font-weight: lighter;
+	font-style: italic;
+}
+.secondTime {
+	display: none;
+}
+.loading-data {
+	width: 10%;
+	margin: auto;
+	height: 5cm;
+	margin-top: 2.5cm;
+}
+.loading-disabled {
+	display: none;
+}
+

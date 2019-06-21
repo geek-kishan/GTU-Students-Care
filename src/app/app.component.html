@@ -1,0 +1,25 @@
+<!-----------------------------Header------------------------------------------->
+<header>
+  <h1><a routerLink="/home">GTU Students Care</a></h1>
+  <p>E-books | Paper solutions | Tutorials</p>
+</header>
+<!---------------------------Navigation---------------------------------------->
+<div class="gtu-navigation">
+  <ul>
+  	<li class="nav-float-left"><a routerLink="/home" routerLinkActive="active-nav">Home</a></li>
+    <li class="nav-float-left" *ngIf="auth.loggedIn()" (click)="myFilesData()"><a routerLink="/myfiles" routerLinkActive="active-nav">My Files</a></li>
+    <li class="nav-float-left"><a routerLink="/upload" routerLinkActive="active-nav">Upload File</a></li>
+    <li class="nav-float-left" *ngIf="!auth.loggedIn()"><a routerLink="/login" routerLinkActive="active-nav">Login</a></li>
+    <li class="nav-float-left" *ngIf="!auth.loggedIn()"><a routerLink="/signup" routerLinkActive="active-nav">Signup</a></li>
+    <li class="nav-float-left" *ngIf="auth.loggedIn()" (click)="auth.logOut()"><a>Logout</a></li>
+    <li class="nav-float-right" routerLink="/myprofile" routerLinkActive="active-nav"><a>My Profile <!--  <mat-icon class="inline-icon">account_circle</mat-icon>--></a></li>
+  </ul>
+</div>
+<!---------------------------router-ourlet------------------------------------->
+<div class="router-outlet">
+	<router-outlet></router-outlet>
+</div>
+<!-------------------------------Footer------------------------------------------>
+<footer>
+	<p>Copyright@GTU Students Care</p> 
+</footer>
